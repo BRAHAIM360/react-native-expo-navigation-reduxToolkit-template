@@ -5,6 +5,9 @@ import { useEffect, useState } from 'react';
 import AppNavigator from './src/navigation/appNavigator';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from './src/hooks/useFonts';
+import { Provider } from 'react-redux'
+import store from './src/redux';
+
 
 export default function App() {
   const [isFontLoaded, setisFontLoaded] = useState(false);
@@ -18,6 +21,7 @@ export default function App() {
   }, []);
 
   return (
-    isFontLoaded === true ? <AppNavigator /> : <AppLoading />
+    isFontLoaded === true ? <Provider store={store}><AppNavigator /></Provider> : <AppLoading />
   );
 }
+{/* <Provider store={store}><AppNavigator/></Provider> */ }
