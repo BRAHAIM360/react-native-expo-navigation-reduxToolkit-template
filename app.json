@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "event-ticket",
-    "slug": "event-ticket",
+    "name": "TryIt",
+    "slug": "TryIt",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
